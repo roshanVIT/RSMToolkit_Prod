@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97488A59-DBF2-437A-A1EC-8A3A4167F41D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RSMTool</RootNamespace>
+    <AssemblyName>RSMTool</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=4.97.4951.28478, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL" />
+    <Reference Include="Excel, Version=2.1.2.3, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\RSMToolV2\packages\ExcelDataReader.2.1.2.3\lib\net20\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\RSMToolV2\packages\DotNetZip.1.9.3\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Engine">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v3.5">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\RSMToolV2\packages\Newtonsoft.Json.6.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\conrec.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\JsonData.cs" />
+    <Compile Include="App_Code\Log.cs" />
+    <Compile Include="App_Code\Tuple.cs" />
+    <Compile Include="App_Code\Utility.cs" />
+    <Compile Include="App_Code\Constant.cs" />
+    <Compile Include="Pages\DownloadExe.aspx.cs">
+      <DependentUpon>DownloadExe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DownloadExe.aspx.designer.cs">
+      <DependentUpon>DownloadExe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InputSelection.aspx.cs">
+      <DependentUpon>InputSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InputSelection.aspx.designer.cs">
+      <DependentUpon>InputSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutputSelection.aspx.cs">
+      <DependentUpon>OutputSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OutputSelection.aspx.designer.cs">
+      <DependentUpon>OutputSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RSMPreview.aspx.cs">
+      <DependentUpon>RSMPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RSMPreview.aspx.designer.cs">
+      <DependentUpon>RSMPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RSMViewer.aspx.cs">
+      <DependentUpon>RSMViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RSMViewer.aspx.designer.cs">
+      <DependentUpon>RSMViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\bg-btn.png" />
+    <Content Include="Images\bg-submit.gif" />
+    <Content Include="Images\gr.png" />
+    <Content Include="Images\grd_alt.png" />
+    <Content Include="Images\grd_head.png" />
+    <Content Include="Images\grd_pgr.png" />
+    <Content Include="Images\greyline.gif" />
+    <Content Include="Images\icon-generic.gif" />
+    <Content Include="Images\icon-image.gif" />
+    <Content Include="Images\icon-media.gif" />
+    <Content Include="Images\icon-zip.gif" />
+    <Content Include="Images\index.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\main_menu_bg.jpg" />
+    <Content Include="Images\main_menu_homelink.jpg" />
+    <Content Include="Images\main_menu_rightlinks_bg.jpg" />
+    <Content Include="Images\point-right.png" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\InputSelection.aspx" />
+    <Content Include="Pages\OutputSelection.aspx" />
+    <Content Include="Pages\RSMPreview.aspx" />
+    <Content Include="Scripts\d3.v3.min.js" />
+    <Content Include="Scripts\dimple.v2.0.0.min.js" />
+    <Content Include="Scripts\dimple.v2.1.0.min.js" />
+    <Content Include="Scripts\jQuery.fileinput.js" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles\basic.css" />
+    <Content Include="Styles\enhanced.css" />
+    <Content Include="Styles\Site.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assemblies\ExportKrigingFitMethods.dll" />
+    <Content Include="Assemblies\HEEDSExtensions.dll" />
+    <Content Include="Assemblies\HEEDSSupport.dll" />
+    <Content Include="Assemblies\KringingExeClassLibrary.dll" />
+    <Content Include="Assemblies\tbb.dll" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\jslider.round.png" />
+    <Content Include="Images\spinner.gif" />
+    <Content Include="Pages\DownloadExe.aspx" />
+    <Content Include="Pages\RSMViewer.aspx" />
+    <Content Include="Scripts\axis.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\core.js" />
+    <Content Include="Scripts\d3.geom.contour.v0.min.js" />
+    <Content Include="Scripts\d3.v3.4.8.js" />
+    <Content Include="Scripts\d3.v3.js" />
+    <Content Include="Scripts\draggable-0.1.js" />
+    <Content Include="Scripts\jquery-1.2.6-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.2.6.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery.dependClass-0.1.js" />
+    <Content Include="Scripts\jquery.mousewheel.min.js" />
+    <Content Include="Scripts\jquery.numberformatter-1.2.3.js" />
+    <Content Include="Scripts\jquery.slider.js" />
+    <Content Include="Scripts\jshashtable-2.1_src.js" />
+    <Content Include="Scripts\legend.js" />
+    <Content Include="Scripts\tmpl.js" />
+    <Content Include="Scripts\tooltip.js" />
+    <Content Include="Scripts\util.js" />
+    <Content Include="Styles\classic.css" />
+    <Content Include="Styles\jslider.blue.css" />
+    <Content Include="Styles\jslider.css" />
+    <Content Include="Styles\jslider.plastic.css" />
+    <Content Include="Styles\jslider.round.css" />
+    <Content Include="Styles\jslider.round.plastic.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
+    <Folder Include="JsonFile\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50324</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/RSMTool</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Pages/Home.aspx" title="Select Data" isClicked="false"  description="">
+        <siteMapNode url="~/Pages/InputSelection.aspx" title="Select Inputs"  isClicked="false" description="">
+        <siteMapNode url="~/Pages/OutputSelection.aspx" title="Select Outputs" isClicked="false"  description="">
+          <siteMapNode url="~/Pages/RSMPreview.aspx" title="RSM Preview" isClicked="false"  description="">
+            
+            <siteMapNode url="~/Pages/RSMViewer.aspx" title="RSM Viewer" isClicked="false" description="">
+              <siteMapNode url="~/Pages/DownloadExe.aspx" isClicked="false" title="Download" description=""/>
+            </siteMapNode>
+            </siteMapNode>
+          </siteMapNode>
+          </siteMapNode>
+   
+    </siteMapNode>
+</siteMap>
